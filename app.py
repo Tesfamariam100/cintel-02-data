@@ -8,6 +8,7 @@ import palmerpenguins
 
 # Use the built-in function to load the Palmer Penguins dataset
 penguins_df = palmerpenguins.load_penguins()
+ui.page_opts(title="Penguins Data Tesfamariam")
 
 # Create a Shiny UI sidebar
 with ui.sidebar(open="open"):
@@ -36,12 +37,12 @@ with ui.layout_columns():
     # DataTable showing all data
     @render.data_frame
     def penguins_datatable():
-        return render.DataTable(penguins_df, width="50%") 
+        return render.DataTable(penguins_df, width="70%") 
 
     # Data Grid showing all data
     @render.data_frame
     def penguins_grid():
-        return render.DataGrid(penguins_df, width="50%")
+        return render.DataGrid(penguins_df, width="70%")
 
 # Create a layout for the graphs
 with ui.layout_columns():
@@ -69,3 +70,4 @@ with ui.layout_columns():
                 def plotly_scatterplot():
                     return px.scatter(penguins_df, x="flipper_length_mm", y="bill_length_mm", color="species", 
                                       title="Plotly Scatterplot: Species")
+
