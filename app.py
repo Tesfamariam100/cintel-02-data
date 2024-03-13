@@ -70,4 +70,3 @@ with ui.layout_columns():
                 def plotly_scatterplot():
                     return px.scatter(penguins_df, x="flipper_length_mm", y="bill_length_mm", color="species", 
                                       title="Plotly Scatterplot: Species")
-
