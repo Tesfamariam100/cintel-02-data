@@ -29,7 +29,7 @@ with ui.sidebar(open="open"):
     # Add a horizontal rule to the sidebar
     ui.hr()
     # Add a hyperlink to the sidebar
-    ui.a("GitHub", href="https://github.com/Tesfamariam100/cintel-02-data", target="_blank")
+    ui.a("My GitHub", href="https://github.com/Tesfamariam100/cintel-02-data", target="_blank")
 
 # Display a DataTable and a Data Grid
 with ui.layout_columns():
